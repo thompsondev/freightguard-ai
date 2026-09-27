@@ -102,7 +102,7 @@ freightguard process examples/freight_confirmation.txt
 Text-based PDFs work too:
 
 ```bash
-freightguard process path/to/rate-confirmation.pdf
+freightguard process assets/Document.pdf
 ```
 
 Scanned PDFs need OCR before this lightweight example can read them.
