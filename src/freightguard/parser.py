@@ -34,9 +34,13 @@ class OpenAIFreightParser:
             raise DocumentParsingError("The document is empty.")
 
         try:
+            # Passing the Pydantic model here makes the SDK generate the JSON schema
+            # and return a validated FreightDocument instead of untrusted JSON text.
             response = self.client.responses.parse(
                 model=self.model,
                 input=[
+                    # Keep the source in the user message. The system prompt tells the
+                    # model to treat anything inside the document as data, not commands.
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": raw_text},
                 ],
@@ -52,4 +56,3 @@ class OpenAIFreightParser:
         if response.output_parsed is None:
             raise DocumentParsingError("The model returned no structured freight data.")
         return response.output_parsed
-

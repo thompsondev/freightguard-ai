@@ -15,6 +15,7 @@ AMBIGUOUS_VALUES = {"", "unknown", "unclear", "ambiguous", "n/a", "not provided"
 
 
 def _money(value: float) -> Decimal:
+    # Convert through str so binary floating-point noise cannot create a false mismatch.
     return Decimal(str(value)).quantize(CENT)
 
 
@@ -53,6 +54,8 @@ def validate_document(document: FreightDocument) -> list[ValidationFinding]:
             )
         )
 
+    # Structured Outputs guarantees these keys exist, but an unsupported or ambiguous
+    # value is deliberately represented as an empty string and still needs review.
     required_text = {
         "carrier_name": document.carrier_name,
         "load_number": document.load_number,
@@ -74,4 +77,3 @@ def validate_document(document: FreightDocument) -> list[ValidationFinding]:
         )
 
     return findings
-

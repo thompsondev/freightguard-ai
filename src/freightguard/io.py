@@ -10,6 +10,7 @@ def read_document(path: Path) -> str:
         raise FileNotFoundError(f"Document not found: {path}")
 
     if path.suffix.casefold() == ".pdf":
+        # pypdf reads an existing text layer. Image-only scans need OCR upstream.
         pages = [page.extract_text() or "" for page in PdfReader(path).pages]
         text = "\n\n".join(pages).strip()
         if not text:
@@ -17,4 +18,3 @@ def read_document(path: Path) -> str:
         return text
 
     return path.read_text(encoding="utf-8")
-

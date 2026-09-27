@@ -14,6 +14,8 @@ def process_document(document: FreightDocument) -> ProcessingResult:
             document=document,
         )
 
+    # Warnings also stop automatic approval. They are less severe than errors, but
+    # still describe a condition the operations team should see before dispatch.
     codes = ", ".join(finding.code.value for finding in findings)
     return ProcessingResult(
         status=DecisionStatus.FLAGGED_FOR_HUMAN_REVIEW,
@@ -21,4 +23,3 @@ def process_document(document: FreightDocument) -> ProcessingResult:
         findings=findings,
         document=document,
     )
-
