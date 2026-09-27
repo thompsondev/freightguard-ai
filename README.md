@@ -31,6 +31,9 @@ FLAGGED_FOR_HUMAN_REVIEW
 ```
 
 The complete machine-readable result is in [`examples/sample_output.json`](examples/sample_output.json).
+An actual OpenAI run against the supplied PDF is captured in
+[`examples/live_terminal_output.txt`](examples/live_terminal_output.txt); credentials and local
+paths have been removed from the transcript.
 
 ## How it works
 
@@ -147,4 +150,3 @@ The parser tests use a fake client, so the test suite does not spend API credits
 ## License
 
 Released under the [MIT License](LICENSE).
-

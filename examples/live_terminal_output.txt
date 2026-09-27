@@ -1,0 +1,36 @@
+$ freightguard process Document.pdf
+{
+  "status": "FLAGGED_FOR_HUMAN_REVIEW",
+  "summary": "Human review required: RATE_MISMATCH, OVERWEIGHT_LOAD.",
+  "findings": [
+    {
+      "code": "RATE_MISMATCH",
+      "severity": "ERROR",
+      "message": "Linehaul plus fuel is $2,550.00, but total pay is $2,800.00 (difference: $250.00)."
+    },
+    {
+      "code": "OVERWEIGHT_LOAD",
+      "severity": "WARNING",
+      "message": "Load weight is 46,800 lbs, which is 1,800 lbs over the 45,000 lb review threshold."
+    }
+  ],
+  "document": {
+    "carrier_name": "Apex Logistics Solutions LLC",
+    "load_number": "LD-994821",
+    "pickup_location": {
+      "city": "Dallas",
+      "state": "TX",
+      "zip": "75201"
+    },
+    "delivery_location": {
+      "city": "Atlanta",
+      "state": "GA",
+      "zip": "30303"
+    },
+    "total_linehaul_rate": 2200.0,
+    "fuel_surcharge": 350.0,
+    "total_pay": 2800.0,
+    "weight_lbs": 46800
+  }
+}
+
