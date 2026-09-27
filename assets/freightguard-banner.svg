@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">FreightGuard AI</title>
+  <desc id="desc">From messy freight documents to explainable decisions</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07182d"/>
+      <stop offset="1" stop-color="#12375b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".25"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <circle cx="1090" cy="62" r="190" fill="#27d3a2" opacity=".08"/>
+  <circle cx="82" cy="398" r="175" fill="#5ba7ff" opacity=".08"/>
+
+  <g transform="translate(72 72)" filter="url(#shadow)">
+    <rect width="220" height="276" rx="20" fill="#fff"/>
+    <rect x="28" y="34" width="128" height="12" rx="6" fill="#153b60"/>
+    <rect x="28" y="64" width="164" height="8" rx="4" fill="#b8c7d8"/>
+    <rect x="28" y="86" width="146" height="8" rx="4" fill="#b8c7d8"/>
+    <rect x="28" y="120" width="88" height="10" rx="5" fill="#153b60"/>
+    <rect x="28" y="146" width="164" height="8" rx="4" fill="#b8c7d8"/>
+    <rect x="28" y="168" width="128" height="8" rx="4" fill="#b8c7d8"/>
+    <rect x="28" y="202" width="164" height="46" rx="10" fill="#fff0e8"/>
+    <path d="M48 225h50m18 0h56" stroke="#ef6b3a" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <path d="M330 210h104" stroke="#5ba7ff" stroke-width="8" stroke-linecap="round"/>
+  <path d="m416 188 24 22-24 22" fill="none" stroke="#5ba7ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(484 112)">
+    <rect width="112" height="196" rx="24" fill="#27d3a2" opacity=".13" stroke="#27d3a2" stroke-width="3"/>
+    <path d="M34 58h44M34 88h44M34 118h26" stroke="#27d3a2" stroke-width="9" stroke-linecap="round"/>
+    <path d="m67 145 13 13 25-29" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(654 98)">
+    <text x="0" y="60" fill="#fff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="58" font-weight="700">FreightGuard AI</text>
+    <text x="2" y="112" fill="#a8c5df" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="25">MESSY DOCUMENTS IN</text>
+    <text x="2" y="154" fill="#27d3a2" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="25">EXPLAINABLE DECISIONS OUT</text>
+    <rect x="2" y="190" width="420" height="58" rx="29" fill="#fff" opacity=".08"/>
+    <circle cx="34" cy="219" r="12" fill="#ef6b3a"/>
+    <text x="58" y="227" fill="#fff" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="20">Human review, with a reason.</text>
+  </g>
+</svg>
